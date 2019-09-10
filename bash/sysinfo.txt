@@ -1,0 +1,6 @@
+Date: 	 03-09-2019 16:48:12 
+Server Name: 	 neiheivj-centos 
+My IP Address: 	 192.168.33.96/24 
+User: 	 neiheivj 
+My Bash Version: 	 4.2.46(2)-release 
+
