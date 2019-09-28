@@ -4,10 +4,10 @@
 #Rotate logs. Renames every day, zips them after day 2, deletes after day 7. EX. syslog, syslog.1, syslog.2.gz, syslog.3.gz ... syslog.7.gz
 
 # Output_Log_Location is the file path of where the output log of what happened will go
-Output_Log_Location="/var/log/rotate_logs.log" 
+Output_Log_Location="$HOME/rotate_logs.log" 
 
 # Path is the file path to the location where the logs we want to rotate are
-Path="/var/log/"
+Path="$HOME/Testing_Project1/"
 
 # Input_Logs is an array of only files that have not been rotated yet in the file path location of $Path
 Input_Logs=$(ls -p ${Path} | grep -v / | grep -vE "[0-9]")
