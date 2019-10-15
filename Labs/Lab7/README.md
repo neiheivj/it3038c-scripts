@@ -1,7 +1,7 @@
 Lab7
 =========
 
-The goal of this script is to show off 3 features that the Carbon module can do. Example 1 goes over the command (Get-CProgramInstallInfo). This command is used for obtaining system level info on an installed program. Example two goes over the command (New-Credential). This command is used to add a new set of credentials with the given username and password. There are many other settings you can change using this setting but to keep things clean and simple these will be the only two referenced. Finnaly, Example 3 will go over the command (Get-User). This command will gather system level infomation over all the accounts currently on the machine. 
+The goal of this script is to show off 3 features that the Carbon module for PowerShell can do. Example 1 goes over the command (Get-CProgramInstallInfo). This command is used for obtaining system level info on an installed program. Example two goes over the command (New-Credential). This command is used to add a new set of credentials with the given username and password. There are many other settings you can change using this setting but to keep things clean and simple these will be the only two referenced. Finnaly, Example 3 will go over the command (Get-User). This command will gather system level infomation over all the accounts currently on the machine. 
 
 # Prerequisites for running the script:
 
