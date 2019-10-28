@@ -1,7 +1,7 @@
 Project 2
 =========
 
-The goal of this project is to rotate all the logs found in a specified directory so that you have one weeks’ worth of data. After day 2 the logs will be zipped and after day 7, they will be deleted. All of the actions taken by the script will be outputted into a log found in the home directory of the user that runs the script. This script is meant to be ran once a day using a cronjob. The directory that the script checks to rotate and where the output log goes can be modified by changing one variable each.
+The goal of this project is to rotate all the logs found in a specified directory so that you have one weeks’ worth of data. After day 2 the logs will be zipped and after day 7, they will be deleted. All of the actions taken by the script will be outputted into a log found in the home directory of the user that runs the script. This script is meant to be ran once a day using a cronjob. This script can rotate as many directories as you like as long as you pass them as parameters. To specify what directories you would like to be rotated add them as parameters when running the script. Usage Example: ./Project2.sh ~/Testing_Project2/test1 ~/TestingProject2/test2
 
 # Prerequisites for running the script:
 
