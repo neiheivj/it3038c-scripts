@@ -4,11 +4,15 @@
 #Rotate logs. Renames every day, zips them after day 2, deletes after day 7. EX. syslog, syslog.1, syslog.2.gz, syslog.3.gz ... syslog.7.gz
 
 # Output_Log_Location is the file path of where the output log of what happened will go
-Output_Log_Location="$HOME/rotate_logs.log" 
+Output_Log_Location="$HOME/rotate_logs.log"
 
 # Path is the file path to the location where the logs we want to rotate are. These are passed through as a parameter when the script is called. usage: ./Project2 /home/neiheivj/Project2/
 for Path in "$@"
+<<<<<<< HEAD
 do 
+=======
+do
+>>>>>>> 3322eff8fedb474587a6d600d63c2d3bf722a8b8
 
     # Input_Logs is an array of only files that have not been rotated yet in the file path location of $Path
     Input_Logs=$(ls -p ${Path} | grep -v / | grep -vE "[0-9]")
@@ -22,7 +26,7 @@ do
                     rm "${Path}/${Log}.7.gz"
                     echo "$(date): ${Path}/${Log}.7.gz was removed" >> $Output_Log_Location
             fi
-        
+
         # This checks if there is a *.6.gz file in existance and if it exists it will rename it *.7.gz and outputs that in that in $Output_Log_Location
             if [ -f "${Path}/${Log}.6.gz" ]
             then
