@@ -26,6 +26,26 @@ This script can be run as a cronjob or with its new modifications can be run man
 		Command:        touch ~/Testing_Project3/test2/house
 		Command:        touch ~/Testing_Project3/test2/bat
 
+# Usage:
+
+    There are four different types of arguments that you can specify as you run the script. 
+
+    -p) This flag stands for Path and indicates what directories you want to rotate. This field is required to run the script. You can list as many as you like but leave a space and leave the final / off the end. These need to be in "".
+
+        Example: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2
+
+    -b) This flag stands for BlackList and indicates what files you dont want to rotate in the specified paths. You can have as many blacklisted files as you want just sepereate them by a space. These need to be in "". This is optional and is null by defualt. 
+
+        Example: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2" -b "/home/neiheivj/Testing_Project3/test1/cat /home/neiheivj/Testing_Project3/test2/house"
+
+    -r) This flag stands for Rotate and indicates how many times you want the specified files to be rotated. This is optional and is 1 by defualt. 
+
+        Example: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2" -b "/home/neiheivj/Testing_Project3/test1/cat /home/neiheivj/Testing_Project3/test2/house" -r 4
+
+    -o) This flag stands for Output_Log_Location and indicates where the output logfile will be located. This is optional and is set to "$HOME/rotate_logs.log" by defualt.
+
+        Example: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2" -b "/home/neiheivj/Testing_Project3/test1/cat /home/neiheivj/Testing_Project3/test2/house" -r 4 -o /var/log/rotate_logs.log
+
 # Example Output:
 
     Before script ran: ll ~/Testing_Project3/test1/ ~/Testing_Project3/test2/
