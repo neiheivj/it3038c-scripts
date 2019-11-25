@@ -28,3 +28,89 @@ This script can be run as a cronjob or with its new modifications can be run man
 
 # Example Output:
 
+    Before script ran: ll ~/Testing_Project3/test1/ ~/Testing_Project3/test2/
+        /home/neiheivj/Testing_Project3/test1/:
+        total 0
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:33 cat
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:33 dog
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:33 pig
+
+        /home/neiheivj/Testing_Project3/test2/:
+        total 0
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:34 bat
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:34 house
+        -rw-rw-r--. 1 neiheivj neiheivj 0 Nov 25 15:34 mouse
+
+    Script 1: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2" -b "/home/neiheivj/Testing_Project3/test1/cat /home/neiheivj/Testing_Project3/test2/house" -r 3
+        [neiheivj@neiheivj-centos Project3]$ ll ~/Testing_Project3/test1/ ~/Testing_Project3/test2/
+        /home/neiheivj/Testing_Project3/test1/:
+        total 16
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 15:33 cat
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 dog
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 dog.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 dog.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 15:33 dog.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 pig
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 pig.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 pig.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 15:33 pig.3.gz
+
+        /home/neiheivj/Testing_Project3/test2/:
+        total 16
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 bat
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 bat.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 bat.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 15:34 bat.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 15:34 house
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 mouse
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 mouse.1
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 16:00 mouse.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 15:34 mouse.3.gz
+
+    Script 2: ./Project3.sh -p "/home/neiheivj/Testing_Project3/test1 /home/neiheivj/Testing_Project3/test2" -b "/home/neiheivj/Testing_Project3/test2/mouse" -r 5
+        [neiheivj@neiheivj-centos Project3]$ ll ~/Testing_Project3/test1/ ~/Testing_Project3/test2/                                                       
+        /home/neiheivj/Testing_Project3/test1/:
+        total 64
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 cat
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 cat.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 cat.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 cat.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 cat.4.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 15:33 cat.5.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 dog
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 dog.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 dog.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 dog.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 dog.4.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 dog.5.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 dog.6.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 dog.7.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 pig
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 pig.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 pig.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 pig.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 pig.4.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 pig.5.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 pig.6.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 pig.7.gz
+
+        /home/neiheivj/Testing_Project3/test2/:
+        total 48
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 bat
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 bat.1
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 bat.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 bat.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:03 bat.4.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 bat.5.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 bat.6.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 26 Nov 25 16:00 bat.7.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 house
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:03 house.1
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 16:03 house.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 16:03 house.3.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 16:03 house.4.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 15:34 house.5.gz
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 mouse
+        -rw-rw-r--. 1 neiheivj neiheivj  0 Nov 25 16:00 mouse.1
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 16:00 mouse.2.gz
+        -rw-rw-r--. 1 neiheivj neiheivj 28 Nov 25 15:34 mouse.3.gz
